@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galer(i)</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            position: relative;
+        }
+
+        .mySlides{
+            display: none;
+        }
+
+        .cursor{
+            cursor: pointer;
+        }
+
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .next{
+            right: 100px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover{
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .numbertext{
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .caption-container{
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column{
+            float: left;
+            width: 16.66%;
+        }
+
+        .demo{
+            opacity: 0.6;
+        }
+
+        .active, .demo:hover{
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="mountain.jpeg" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="lake.jpeg" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="road.jpeg" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="waterfall.jpeg" style="width: 100%;">
+        </div>
+
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="prev" onclick="plusSlides(1)">&#10095</a> -->
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="mountain.jpeg" style="width: 100%;" onclick="currentSlide(1)" alt="mountain">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="lake.jpeg" style="width: 100%;" onclick="currentSlide(2)" alt="lake">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="road.jpeg" style="width: 100%;" onclick="currentSlide(3)" alt="road">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="waterfall.jpeg" style="width: 100%;" onclick="currentSlide(4)" alt="waterfall">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n){
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n){
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n){
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++){
+            dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+
+</body>
+
+</html>

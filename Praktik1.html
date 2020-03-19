@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .Button_tema{
+            width: 150px;
+            height: 100px;
+            background-color: aqua;
+            box-sizing: border-box;
+            position: fixed;
+            margin-top: -50px;
+            margin-bottom: 50px;
+            margin-left: 980px;
+            border-radius: 8px;
+        }
+
+        .tombol_terang{
+            margin-top: 20px;
+            margin-left: 17.5px;
+        }
+
+        .tombol_gelap{
+            margin-top: 20px;
+            margin-left: 14.5px;
+        }
+
+        .container{
+            background-color: rgb(236, 233, 197);
+            border:2px solid black;
+            width: 600px;
+            height: 1500px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .Ribbon{
+            background-color: transparent;    
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            margin-top: 0px;
+            margin-right: 970px;
+            margin-left: 460px;
+            background-image: url(rsz_twitter-ribbon-png-300x200.png);
+        }
+
+        .Judul{
+            background-color: transparent;
+            border: 2px solid black;
+            width: 600px;
+            height: 100px;
+            box-sizing: border-box;
+            padding-top: 10px;
+            padding-left: 10px;
+            text-align: center;
+
+        }
+        .Menu{
+            background-color: burlywood;
+            border: 2px solid black;
+            width: 600px;
+            height: 50px;
+            align-self: auto;
+            box-sizing: border-box;
+            padding-top: 10px;
+            padding-left: 10px;
+            
+
+
+        }
+
+        .Banner{
+        background-color: rgb(238, 231, 157);
+        width: 600px;
+        height: 100px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        border: 1px solid black;;
+        background-image: url(macbook.jpg);
+        background-size: cover;
+    }
+    .Banner img{
+        width: 490px;
+        height: 100px;
+        margin-left: 55px;
+        margin-right: 30px;
+        background-image: url();
+
+    }
+
+    .JudulArtikel{
+        /* border: 2px solid black; */
+        box-sizing: border-box;
+        /* border: 1px solid black;; */
+        width: 600px;
+        height: 80px;
+        /* box-sizing: border-box; */
+        
+        /* text-align: center; */
+
+
+        }
+
+    .Konten{
+        width: 600px;
+        height: 400px;
+        background-color: cornflowerblue;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 40px;
+        /* border: 2px solid black; */
+        box-sizing: border-box;
+        overflow: auto;
+
+        /* border: 1px solid black;; */
+
+
+    }
+    .Konten img{
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        float: left;
+
+
+    }
+
+
+    .Galery{
+        background-color: cadetblue;
+        width: 140px;
+        height: 100px;
+        margin: 5px 5px 5px 5px;
+        float: left;
+        background-image: url(code2.jpg);
+        background-size: cover;
+
+
+    }
+    .Footer{
+        padding-left: 10px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        border: 1px solid black;;
+
+    }
+
+    .kotak_hijau{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+
+    .cobaevent{
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+    }
+
+    .cobaevent1{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    
+
+    
+    </style>
+</head>
+
+<body>
+
+    
+
+    <div class="Button_tema">
+        <div class="tombol_terang">
+            <button type="button" id="btn" onclick="ubahtema_terang()">Mode Siang Hari</button>
+        </div>
+        <div class="tombol_gelap">
+            <button type="button" id="btn" onclick="ubahtema_gelap()">Mode Malam Hari</button>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+
+        <div class="Ribbon">
+        </div>
+
+        <div class="Judul">
+            <h1>My Website</h1>
+        </div>
+
+
+        <div class="Menu">
+            <a href="#">Home</a>
+            <a href="#">Profil</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <div class="Banner">
+        </div>
+
+        <div class="JudulArtikel" >
+            <h1>Judul Artikel</h1>
+            <p>By : Bram</p>
+            
+        </div>
+        <div id="konten" class="Konten">
+            <img src="">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo blanditiis incidunt doloremque consequuntur quisquam esse accusamus laborum iste tenetur repudiandae a dignissimos, natus maiores aut praesentium vel, fugit quasi eos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo blanditiis incidunt doloremque consequuntur quisquam esse accusamus laborum iste tenetur repudiandae a dignissimos, natus maiores aut praesentium vel, fugit quasi eos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo blanditiis incidunt doloremque consequuntur quisquam esse accusamus laborum iste tenetur repudiandae a dignissimos, natus maiores aut praesentium vel, fugit quasi eos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo blanditiis incidunt doloremque consequuntur quisquam esse accusamus laborum iste tenetur repudiandae a dignissimos, natus maiores aut praesentium vel, fugit quasi eos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo blanditiis incidunt doloremque consequuntur quisquam esse accusamus laborum iste tenetur repudiandae a dignissimos, natus maiores aut praesentium vel, fugit quasi eos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo blanditiis incidunt doloremque consequuntur quisquam esse accusamus laborum iste tenetur repudiandae a dignissimos, natus maiores aut praesentium vel, fugit quasi eos.</p>
+            
+            
+
+            
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        <div class="Galery">
+        </div>
+        
+
+        <!-- <div class="Footer">
+            <p class="copyright">Copyright 2020</p>
+            
+        </div> -->
+
+    </div>
+
+    <div id="cobaevent" class="kotak_hijau" onmouseup"divkelakuan() onmousedown="divkelakuan1()"">
+
+    </div>
+
+
+    <script>
+
+        function ubahtema_terang(){
+            document.getElementById('konten').style.backgroundColor="white";
+            document.getElementById('konten').style.color="black";
+            document.getElementById('konten').style.border=("10px line black");
+        }
+
+        function ubahtema_gelap(){
+            document.getElementById('konten').style.backgroundColor="black"
+            document.getElementById('konten').style.color="pink";
+            document.getElementById('konten').style.border="12px dot pink";
+        }
+
+        function divkelakuan(){
+            document.getElementById("cobaevent").className="cobaevent";
+        }
+
+        function divkelakuan1(){
+            document.getElementById("cobaevent").className="cobaevent1";
+        }
+
+
+    </script>
+    
+
+    
+</body>
+</html>

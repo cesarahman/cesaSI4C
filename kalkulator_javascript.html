@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Javascript</title>
+
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            text-align: center;
+            margin: auto auto auto auto;
+            padding: 10px 10px 10px 10px;
+            border-radius: 15%;
+        }
+
+
+        .txt_1{
+            width: 90%;
+            height: 50px;
+            background-color: pink;
+            border-radius: 100pt;
+            margin-top: 75px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 10px 10px 10px 10px;
+        }
+
+
+        .txt_2{
+            width: 90%;
+            height: 50px;
+            background-color: rosebrown;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 10px 10px 10px;
+        }
+
+        input[type = text]{
+            align-self: center;
+            width: 90%;
+            padding: 10px 10px 10px 10px;
+            margin: 10px 10px 10px 10px;
+            box-sizing: border-box;
+            border-bottom: 2px solid black;
+        }
+
+
+
+        .tombol_tambah{
+            width: 90%;
+            height: 30px;
+            background-color: red;
+            text-align: center;
+            margin: 25px auto 25px auto;
+            padding-top: 15px;
+            border-radius: 40px;
+        }
+
+        .txt_hasil{
+            width: 90%;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            margin: 25px auto 25px auto;
+            padding: 10px 10px 10px 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Javascript</h1>
+
+
+        <div class="txt_1">
+            <input type="text" name="angka1" id="angka1">
+        </div>
+
+        <div class="txt_2">
+            <input type="text" name="angka2" id="angka2">
+        </div>
+
+        <div class="tombol_tambah">
+        <left>
+            <input type="button" onclick="operasitambah()" value="Tambah"></input>
+        </left>
+        <left>
+            <input type="button" onclick="operasikurang()" value="Kurang"></input>
+        </left>
+        <left>
+            <input type="button" onclick="operasikali()" value="Kali"></input>
+        </left>
+        <left>
+            <input type="button" onclick="operasibagi()" value="Bagi"></input>
+        </left>
+         </div> 
+
+        <div class="txt_hasil">
+            <h1 id="txt_hasil">contoh</h1>
+        </div>
+    </div>
+
+
+`
+
+    <script>
+
+        function operasitambah(){
+            var angka1=document.getElementById("angka1").value;
+            var angka2=document.getElementById("angka2").value;
+            var angka1=Number(angka1);
+            var angka2=Number(angka2);
+            var hasil1 = angka1+angka2;
+
+            document.getElementById("txt_hasil").innerHTML=hasil1;
+        }
+
+        function operasikurang(){
+            var angka1=document.getElementById("angka1").value;
+            var angka2=document.getElementById("angka2").value;
+            var angka1=Number(angka1);
+            var angka2=Number(angka2);
+            var hasil2 = angka1-angka2;
+
+            document.getElementById("txt_hasil").innerHTML=hasil2;
+        }
+
+        function operasikali(){
+            var angka1=document.getElementById("angka1").value;
+            var angka2=document.getElementById("angka2").value;
+            var angka1=Number(angka1);
+            var angka2=Number(angka2);
+            var hasil3 = angka1*angka2;
+
+            document.getElementById("txt_hasil").innerHTML=hasil3;
+        }
+
+        function operasibagi(){
+            var angka1=document.getElementById("angka1").value;
+            var angka2=document.getElementById("angka2").value;
+            var angka1=Number(angka1);
+            var angka2=Number(angka2);
+            var hasil4 = angka1/angka2;
+
+            document.getElementById("txt_hasil").innerHTML=hasil4;
+        }
+
+    </script>
+
+</body>
+</html>
